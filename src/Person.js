@@ -1,13 +1,23 @@
 class Person{
 
     constructor(name){
-        this.name = name;
+        console.log(name);
+        this.names = name;
     }
 
     greet(){
-        return 'Hi '+this.name;
+        this.names.forEach( name => console.log(name) );
     }
 
 }
 
-console.log(new Person('john').greet());
+class names{
+    
+    constructor(nm){
+        console.log(nm);
+        this.name = nm;
+    }
+
+}
+
+new Person([new names('sam'),new names('adam'),new names('jeff')]).greet();

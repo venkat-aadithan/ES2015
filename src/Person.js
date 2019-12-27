@@ -1,6 +1,5 @@
-function calculateDiscount(price,discount = .25){
-    return price - (price * discount)
+function calculateSum(...price){
+    return price.reduce( (prev,current) => prev + current )
 }
 
-alert(calculateDiscount(100))
-alert(calculateDiscount(100,.10));
+alert(calculateSum(1,2,3,4,5))

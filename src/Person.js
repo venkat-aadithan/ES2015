@@ -1,23 +1,6 @@
-class Person{
-
-    constructor(name){
-        console.log(name);
-        this.names = name;
-    }
-
-    greet(){
-        this.names.forEach( name => console.log(name) );
-    }
-
+function calculateDiscount(price,discount = .25){
+    return price - (price * discount)
 }
 
-class names{
-    
-    constructor(nm){
-        console.log(nm);
-        this.name = nm;
-    }
-
-}
-
-new Person([new names('sam'),new names('adam'),new names('jeff')]).greet();
+alert(calculateDiscount(100))
+alert(calculateDiscount(100,.10));
